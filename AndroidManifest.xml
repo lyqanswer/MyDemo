@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.edu.mydemolist"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name="com.edu.mydemolist.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Edu.NoTitleBar.Anim" >
+        <activity
+            android:name="com.edu.mydemolist.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".addsub.AddAndSubViewActivity" />
+        <activity android:name=".bearsms.BearSMSCaptchaActivity" />
+        <activity android:name="com.edu.mydemolist.clearedittext.ClearEditTextActivity" />
+        <activity android:name="com.edu.mydemolist.sortlist.SortListActivity" />
+        <activity android:name="com.edu.mydemolist.timebutton.TimeButtonActivity" />
+        <activity android:name="com.edu.mydemolist.textrotate.TextRoatateActivty" />
+        <activity android:name="com.edu.mydemolist.evenbus.BMainActivity" />
+        <activity android:name="com.edu.mydemolist.evenbus.EvenBusActivity" />
+        <activity android:name="com.edu.mydemolist.guide.MyGuideViewActivity" />
+        <activity android:name="com.edu.mydemolist.findid.FindIdActivity" />
+        <activity android:name="com.edu.mydemolist.viewpager.MyPagerActivity" />
+        <activity android:name="com.edu.mydemolist.readxml.ReadWriteXMLActivity" />
+        <activity android:name="com.edu.mydemolist.popup.PopupWindowActivity" />
+        <activity android:name="com.edu.mydemolist.thread.TreadActivity" />
+        <activity android:name="com.edu.mydemolist.zoonin.ZoomInActivity" />
+        <activity android:name="com.edu.mydemolist.clearedittext.EditTextActivity" />
+        <activity android:name="com.edu.mydemolist.spanned.SpannedActivity" />
+        <activity android:name="com.edu.mydemolist.recycle.RecycleActivity" />
+        <activity android:name="com.edu.mydemolist.recycle.AActivity" />
+        <activity android:name="com.edu.mydemolist.horizontalselectedview.HorizontalselectedViewActivity" />
+
+        <meta-data
+            android:name="JUHE_KEY"
+            android:value="2dd5a0c1d5343a500621bfb78dc0cee2" />
+
+        <!-- Service -->
+        <service android:name="com.edu.mydemolist.thread.PollingService" >
+            <intent-filter>
+                <action android:name="com.edu.mydemolist.thread.PollingService" />
+            </intent-filter>
+        </service>
+        <service android:name="com.edu.mydemolist.thread.EduCoreService" >
+            <intent-filter>
+                <action android:name="com.edu.mydemolist.thread.EduCoreService" />
+            </intent-filter>
+        </service>
+        <service android:name="com.edu.mydemolist.thread.ScreenService" >
+            <intent-filter>
+                <action android:name="com.edu.mydemolist.thread.ScreenService" />
+            </intent-filter>
+        </service>
+        <service android:name="com.edu.mydemolist.thread.StartUpReceiver" >
+            <intent-filter>
+                <action android:name="com.edu.mydemolist.thread.StartUpReceiver" />
+            </intent-filter>
+        </service>
+    </application>
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:label="Tests for My App"
+        android:targetPackage="com.edu.mydemolist.readxml" />
+
+</manifest>
